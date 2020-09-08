@@ -1,6 +1,7 @@
 const synth = window.speechSynthesis;
 const voices = synth.getVoices();
-let selectedOption = "Google português do Brasil";
+const selectedOption = "Google português do Brasil";
+let voice; 
 for(i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
         utterThis.voice = voices[i];
@@ -22,6 +23,7 @@ if ("id" in parameters && "rewardId" in parameters) {
 
 function speechSynthesiser(texto) {
     const utterThis = new SpeechSynthesisUtterance(texto);
+    utterThis.voice = voice;
     synth.speak(utterThis);
 }
 
