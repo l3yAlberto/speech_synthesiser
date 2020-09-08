@@ -1,12 +1,4 @@
 const synth = window.speechSynthesis;
-const voices = synth.getVoices();
-const selectedOption = "Google português do Brasil";
-let voice; 
-for(i = 0; i < voices.length ; i++) {
-    if(voices[i].name === selectedOption) {
-        voice = voices[i];
-    }
-}
 const parameters = {};
 let ws;
 
@@ -22,8 +14,14 @@ if ("id" in parameters && "rewardId" in parameters) {
 }
 
 function speechSynthesiser(texto) {
+    const voices = synth.getVoices();
+    const selectedOption = "Google português do Brasil";
     const utterThis = new SpeechSynthesisUtterance(texto);
-    utterThis.voice = voice;
+    for(i = 0; i < voices.length ; i++) {
+        if(voices[i].name === selectedOption) {
+            utterThis.voice = voices[i];
+        }
+    }
     synth.speak(utterThis);
 }
 
