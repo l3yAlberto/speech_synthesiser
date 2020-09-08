@@ -4,7 +4,7 @@ const selectedOption = "Google português do Brasil";
 let voice; 
 for(i = 0; i < voices.length ; i++) {
     if(voices[i].name === selectedOption) {
-        utterThis.voice = voices[i];
+        voice = voices[i];
     }
 }
 const parameters = {};
