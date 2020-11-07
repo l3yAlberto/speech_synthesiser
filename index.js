@@ -95,7 +95,3 @@ function connect() {
     };
     
 }
-
-setInterval(() => {
-    speechSynthesiser("Testando");
-}, 5000);
