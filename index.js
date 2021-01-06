@@ -2,6 +2,8 @@ const synth = window.speechSynthesis;
 const parameters = {};
 let ws;
 
+https://l3yalberto.github.io/speech_synthesiser/?id=481058159&rewardId=
+
 location.search.slice(1).split('&').forEach((value, number)=>{
     const data = value.split('=');
     if (data.length > 1) {
