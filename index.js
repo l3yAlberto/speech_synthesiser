@@ -2,8 +2,6 @@ const synth = window.speechSynthesis;
 const parameters = {};
 let ws;
 
-https://l3yalberto.github.io/speech_synthesiser/?id=481058159&rewardId=
-
 location.search.slice(1).split('&').forEach((value, number)=>{
     const data = value.split('=');
     if (data.length > 1) {
@@ -16,8 +14,6 @@ if ("id" in parameters && "rewardId" in parameters) {
 }
 
 function speechSynthesiser(texto) {
-    let ad = new Audio('https://api.streamelements.com/kappa/v2/speech?voice=Ricardo&text=Oi+testando&key=duJi9ctCHqon3ykyNiIC2enKO-GkRT_qEGQulzc2GAUW1Eoj');
-    ad.play();
     const voices = synth.getVoices();
     const selectedOption = "Google português do Brasil";
     const utterThis = new SpeechSynthesisUtterance(texto);
